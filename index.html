@@ -27,23 +27,15 @@
   </head>
   <body>
     <div id="ar-container">
-      <a-scene
-        mindar-face
-        color-space="sRGB"
-        embedded
+        <a-scene mindar-face embedded color-space="sRGB"
         vr-mode-ui="enabled: false"
-        device-orientation-permission-ui="enabled: true"
-      >
-        <a-assets>
-          <a-asset-item id="model" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"></a-asset-item>
-        </a-assets>
+        device-orientation-permission-ui="enabled: true">
+ <a-camera active="true" position="0 0 0"></a-camera>
 
-        <a-camera active="true" position="0 0 0"></a-camera>
-
-        <a-entity mindar-face-target="anchorIndex: 168">
-          <a-gltf-model src="#model" scale="0.05 0.05 0.05" rotation="0 180 0" position="0 -0.5 0"></a-gltf-model>
-        </a-entity>
-      </a-scene>
+ <a-entity mindar-face-target="anchorIndex: 168">
+   <a-box color="red" depth="0.1" height="0.1" width="0.1"></a-box>
+ </a-entity>
+</a-scene>
     </div>
   </body>
 </html>
